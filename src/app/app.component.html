@@ -1,0 +1,16 @@
+<mat-toolbar>
+
+  <mat-toolbar-row>
+    <span><img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2000px-Netflix_2015_logo.svg.png "/></span>
+
+    <span class="example-spacer"></span>
+
+    <button *ngIf="!token" mat-raised-button class="example-icon"><a href="/login">Connexion</a></button>
+    <button *ngIf="!token"mat-raised-button class="example-icon"><a href="/register">Inscription</a></button>
+    <button *ngIf="token" mat-raised-button  class="example-icon" (click)="logout()">Déconnexion</button>
+
+  </mat-toolbar-row>
+
+
+</mat-toolbar>
+<router-outlet class="content"></router-outlet>

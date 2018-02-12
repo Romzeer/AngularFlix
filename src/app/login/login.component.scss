@@ -1,0 +1,11 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.login-content{
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/57515065-9183-4b4d-a101-c1c0c1c29dce/ab06b3af-524a-4413-822a-9f049083ae2b/FR-fr-20180122-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+}

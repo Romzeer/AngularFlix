@@ -1,0 +1,10 @@
+<div class="container">
+  <form [formGroup]="form" (submit)="submitEvent()">
+
+    <ng-container *ngFor="let control of controls">
+      <app-form-factory-input [input]="control" [form]="form"></app-form-factory-input>
+    </ng-container>
+
+    <button mat-raised-button color="warn" type="submit"  [disabled]="form.invalid">Valider</button>
+  </form>
+</div>

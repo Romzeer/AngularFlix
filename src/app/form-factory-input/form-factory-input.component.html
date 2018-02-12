@@ -1,0 +1,32 @@
+<ng-container [formGroup]="form">
+
+  <ng-container *ngIf="input.type == 'hidden'">
+    <input type="hidden" [formControlName]="input.id">
+  </ng-container>
+
+  <ng-container *ngIf="input.type != 'hidden'">
+    <div class="form-group">
+      <label>{{ input.label }}</label>
+
+      <mat-form-field *ngIf="input.type == 'text'">
+        <input type="text" class="form-control" matInput [formControlName]="input.id">
+      </mat-form-field>
+
+      <mat-form-field *ngIf="input.type == 'email'">
+        <input type="email" class="form-control" matInput [formControlName]="input.id">
+      </mat-form-field>
+
+      <mat-form-field *ngIf="input.type == 'password'">
+        <input type="password" class="form-control" matInput [formControlName]="input.id">
+      </mat-form-field>
+
+
+    </div>
+    <ng-container *ngIf="form.controls[ input.id ].errors && form.controls[ input.id ].touched">
+
+      <ng-container *ngIf="form.controls[ input.id ].errors.required">
+        <div class="alert alert-danger">Le champs est requis</div>
+      </ng-container>
+    </ng-container>
+
+  </ng-container>
